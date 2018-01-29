@@ -42,7 +42,7 @@ Sets & Double struck capitals & $\mathbb{P}_{256}$, positive integers less than 
 \midrule
 Components or subsequences of sequences & Square brackets & $\boldsymbol{\mu}_\mathbf{s}[0]$, the first item on the stack\newline $\boldsymbol{\mu}_\mathbf{m}[0..31]$ the first $32$ items in memory. \\
 \midrule
-Modified (and utilisable) value & Prime mark & $g'$ gas remaining\newline Exception: $s'$ is just a scalar! (Transaction status code.) \\
+Modified (and utilisable) value & Prime mark & $g'$ gas remaining. \\
 \midrule
 Intermediate values & Asterisk superscripts & $g^*$ gas to be refunded\newline $g^{**}$ available gas remaining after code execution.\\
 \midrule
@@ -167,11 +167,11 @@ $S(T)$ & Sender function---recovers the sender address from the transaction: \ne
 
 \vspace{5pt} \\
 \multicolumn{2}{l}{Transaction Receipt} \\*[5pt]
-$R$ & A transaction receipt: $R \equiv (R_u, R_b, R_\mathbf{l}, R_{s'})$ \\
+$R$ & A transaction receipt: $R \equiv (R_u, R_b, R_\mathbf{l}, R_z)$ \\
 $R_u$ & The cumulative gas used so far in the block. \\
 $R_b$ & The bloom filter composed from the information in the transaction logs. \\
 $R_\mathbf{l}$ & The log entries created by the transaction, $(O_0, O_1, ...)$. \\
-$R_{s'}$ & The status code of the transaction. \\
+$R_z$ & The status code of the transaction. \\
 $O$ & A log entry: $O \equiv (O_a, ({O_\mathbf{t}}_0, {O_\mathbf{t}}_1, ...), O_\mathbf{d})$. \\
 $O_a$ & The logger's address. \\
 $O_\mathbf{t}$ & A 32-byte log topic. \\
@@ -179,7 +179,7 @@ $O_\mathbf{d}$ & The log data for this entry. \\
 
 $\Upsilon^g$ & The total gas used in this transaction. \\
 $\Upsilon^\mathbf{l}$ & The logs created by this transaction. \\
-$\Upsilon^s$ & The status code of this transaction, $s'$. \\
+$\Upsilon^z$ & The status code of this transaction, $z$. \\
 
 \vspace{5pt} \\
 \midrule
