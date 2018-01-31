@@ -93,11 +93,12 @@ $\boldsymbol{\mu}_\mathbf{s}[n]$ & Item at stack depth $n$. \\
 \vspace{5pt} \\
 \midrule
 \multicolumn{2}{l}{\textbf{Substate}} \\*[5pt]
-$A$ & A Transaction substate during execution: $\equiv (A_\mathbf{s}, A_\mathbf{l}, A_r) \equiv A \equiv (\mathbf{s}, \mathbf{l}, r)$. \\
-$A_\mathbf{s}$ & The self-destruct set. \\
+$A$ & A Transaction substate during execution: $A \equiv (A_\mathbf{s}, A_\mathbf{l}, A_\mathbf{t}, A_r) \equiv (\mathbf{s}, \mathbf{l}, \mathbf{t}, r)$. \\
+$A_\mathbf{s}$ & The self-destruct set. These accounts will be discarded following the transaction's completion. \\
 $A_\mathbf{l}$ & The log series. \\
+$A_\mathbf{t}$ & The set of touched accounts. Empty ones are deleted at the end of the transaction.\\
 $A_r$ & The gas refund balance. Can partially offset execution costs.\\
-$A^0$ & The empty substate: $A^0 \equiv (\varnothing, (), 0)$. \\
+$A^0$ & The empty substate: $A^0 \equiv (\varnothing, (), \varnothing, 0)$. \\
 
 \vspace{5pt} \\
 \midrule
