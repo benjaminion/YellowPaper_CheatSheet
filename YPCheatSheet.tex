@@ -168,11 +168,11 @@ $S(T)$ & Sender function---recovers the sender address from the transaction: \ne
 
 \vspace{5pt} \\
 \multicolumn{2}{l}{Transaction Receipt} \\*[5pt]
-$R$ & A transaction receipt: $R \equiv (R_u, R_b, R_\mathbf{l}, R_z)$ \\
+$R$ & A transaction receipt: $R \equiv (R_z, R_u, R_b, R_\mathbf{l})$ \\
+$R_z$ & The status code of the transaction. \\
 $R_u$ & The cumulative gas used so far in the block. \\
 $R_b$ & The bloom filter composed from the information in the transaction logs. \\
 $R_\mathbf{l}$ & The log entries created by the transaction, $(O_0, O_1, ...)$. \\
-$R_z$ & The status code of the transaction. \\
 $O$ & A log entry: $O \equiv (O_a, ({O_\mathbf{t}}_0, {O_\mathbf{t}}_1, ...), O_\mathbf{d})$. \\
 $O_a$ & The logger's address. \\
 $O_\mathbf{t}$ & A 32-byte log topic. \\
