@@ -119,6 +119,7 @@ $I_w$ & Flag for permission to make modifications to the state. See EIP-214, STA
 \multicolumn{2}{l}{Execution} \\*[5pt]
 $\Xi$ & The code execution function $(\boldsymbol{\sigma}', g', A, \mathbf{o}) \equiv \Xi(\boldsymbol{\sigma}, g, I)$. \\
 $\mathbf{o}$ & The output data of a message call, $\mathbf{o} \equiv H(\boldsymbol{\mu}, I)$.\newline At contract creation, the contract bytecode to be deployed. \\
+$\mathbf{i}$ & The initialisation EVM code for newly deployed contract (contract constructor). \\
 $H(\boldsymbol{\mu}, I)$ & The normal halting function, usually the value provided by the RETURN or REVERT opcodes, or empty in the case of STOP. \\
 $Z(\boldsymbol{\sigma}, \boldsymbol{\mu}, I)$ & The exceptional halting function. \\
 $w$ & The current operation to be executed: $w \equiv I_\mathbf{b}[\boldsymbol{\mu}_{pc}]$ if $\boldsymbol{\mu}_{pc} < \lVert I_\mathbf{b} \rVert$, and \small{STOP} otherwise. \\
