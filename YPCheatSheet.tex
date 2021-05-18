@@ -197,9 +197,9 @@ $\mathcal{B}$ & Bit reference function such that $\mathcal{B}_j(\mathbf{x})$ equ
 $\mathtt{EMPTY}(\boldsymbol{\sigma}, a)$ & An account $a$ is \textit{empty} when it has no code, zero nonce and zero balance, $\boldsymbol{\sigma}[a]_c = \texttt{\small KEC}\big(()\big) \wedge \boldsymbol{\sigma}[a]_n = 0 \wedge \boldsymbol{\sigma}[a]_b = 0$. \\
 $\mathtt{DEAD}(\boldsymbol{\sigma}, a)$ & An account $a$ is \textit{dead} when its account state is non-existent or empty: $\varnothing \vee \mathtt{EMPTY}(\boldsymbol{\sigma}, a)$. \\
 $\mathtt{TRIE}$ & The root hash of the Merkle Patricia tree constructed from its arguments. \\
-$\mathtt{KEC}$ & TODO \\
-$\mathtt{RLP}$ & TODO \\
-$\mathtt{PoW}$ & TODO \\
+$\mathtt{KEC}$ & Keccak-256 hash function. \\
+$\mathtt{RLP}$ & Recursive Length Prefix function. A serialization method for encoding arbitrarily structured binary data (byte arrays). \\
+$\mathtt{PoW}$ & Proof of Work function. \\
 
 \vspace{5pt} \\
 \midrule
